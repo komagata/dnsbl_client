@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.summary = 'DNSBL Client is simple solution for spam blocking.'
   s.version = '0.0.1'
   s.files = %w[README lib/dnsbl.rb lib/dnsbl/client.rb lib/dnsbl/bbq.rb]
+  s.has_rdoc = true
 end
