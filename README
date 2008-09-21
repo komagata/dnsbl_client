@@ -1,0 +1,30 @@
+= DNSBL Client -  Simple DNS BlackList Clinet.
+
+== Description
+
+DNSBL Client is simple solution for spam blocking.
+(What is DNSBL? http://en.wikipedia.org/wiki/Dnsbl)
+
+== Usage
+
+Use DNSB Client by irb.
+
+  % irb -r dnsbl
+  >> DNSBL::Client.new('list.dsbl.org', 'niku.2ch.net').listed? '61.211.32.39' # safe ip
+  => false
+  >> DNSBL::Client.new('list.dsbl.org', 'niku.2ch.net').listed? '78.157.143.202' # spam ip
+  => true
+
+Use DNSB BBQ. (What is BBQ? http://bbq.uso800.net/)
+
+  % irb -r dnsbl
+  >> DNSBL::BBQ.listed? '61.211.32.39' # safe ip
+  => false
+  >> DNSBL::BBQ.listed? '78.157.143.202' # spam ip
+  => true
+
+== Copyright
+
+Author::    Masaki Komagata <komagata@gmail.com>
+Copyright:: Copyright (c) 2008 Masaki Komagata
+License::   MIT license
